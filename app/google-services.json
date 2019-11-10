@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "393813279059",
+    "firebase_url": "https://easytlnew.firebaseio.com",
+    "project_id": "easytlnew",
+    "storage_bucket": "easytlnew.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:393813279059:android:5eb449310a7d5099",
+        "android_client_info": {
+          "package_name": "com.example.easytl"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "393813279059-36j2pc06pnl732i0hj0fequoefdp7k3a.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.easytl",
+            "certificate_hash": "db98e8de76b054c7f1f3065faf7b2afb82d75ac1"
+          }
+        },
+        {
+          "client_id": "393813279059-gc2tqf455fr569k913c38fjebd40jdbr.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2k6DyIjknBtGdbwE49p79jD3cdmLwW1w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "393813279059-gc2tqf455fr569k913c38fjebd40jdbr.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

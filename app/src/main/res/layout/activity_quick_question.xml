@@ -1,0 +1,192 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/constraintLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2_1">
+
+    <Button
+        android:id="@+id/veryBackButton"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorTransarent"
+        android:drawableStart="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="veryBackButtonClick"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#ECECE9"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="414dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/quickTestTextView"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="top"
+        android:text="Быстрый тест"
+        android:textAlignment="center"
+        android:textColor="#ECECE9"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/questionHeadRectangle"
+        android:layout_width="414dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:background="@color/second_col_transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/questionNumTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Вопрос:\n"
+        app:layout_constraintBottom_toBottomOf="@+id/questionHeadRectangle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questionHeadRectangle" />
+
+    <TextView
+        android:id="@+id/timerTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="Оставшееся время:\n"
+        app:layout_constraintBottom_toBottomOf="@+id/questionHeadRectangle"
+        app:layout_constraintEnd_toEndOf="@+id/questionHeadRectangle"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/questionHeadRectangle" />
+
+    <WebView
+        android:id="@+id/gifochkaWebView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionHeadRectangle" />
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="30dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifochkaWebView" />
+
+    <Button
+        android:id="@+id/nextButton"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorTransarent"
+        android:drawableStart="@drawable/arrow_right_24dp"
+        android:onClick="nextBut"
+        android:textColor="#FFFFFF"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/backButton"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorTransarent"
+        android:drawableStart="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:onClick="backBut"
+        android:textColor="#FFFFFF"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTextView">
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="0dp"
+            android:layout_marginTop="0dp"
+            android:layout_marginEnd="0dp"
+            app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+            <RadioButton
+                android:id="@+id/answerRadioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="answerRBclick_0"
+                android:text="RadioButton" />
+
+            <RadioButton
+                android:id="@+id/answerRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="answerRBclick_1"
+                android:text="RadioButton" />
+
+        </RadioGroup>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

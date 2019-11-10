@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="157dp"
+    android:gravity="bottom"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:background="@drawable/rectangle"
+    android:theme="@style/ThemeOverlay.AppCompat.Dark">
+<androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/circleImageView"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_marginStart="5dp"
+            android:src="@drawable/userimg"
+            app:civ_border_color="#FBFBFB"
+            app:civ_border_width="2dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/username_loged"
+            android:layout_width="135dp"
+            android:layout_height="49dp"
+            android:layout_marginStart="5dp"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="Имя"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+            android:textColor="#ECECE9"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/circleImageView" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="56dp"
+            android:layout_height="56dp"
+            android:background="@drawable/exitbut"
+            android:onClick="exitBut"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageView
+            android:id="@+id/firstS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/secS"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empt_star" />
+
+        <ImageView
+            android:id="@+id/secS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/thirdS"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empt_star" />
+
+        <ImageView
+            android:id="@+id/thirdS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/fourthS"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empt_star" />
+
+        <ImageView
+            android:id="@+id/fourthS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/fifthS"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empt_star" />
+
+        <ImageView
+            android:id="@+id/fifthS"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="8dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/empt_star" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

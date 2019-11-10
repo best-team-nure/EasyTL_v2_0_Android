@@ -1,0 +1,334 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2_1"
+    tools:context=".FAQ">
+
+    <View
+        android:id="@+id/rectangle2"
+        android:layout_width="414dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/back_button3"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorTransarent"
+        android:drawableStart="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="backBut"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#ECECE9"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/some_id2"
+        android:layout_width="107dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="140dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="140dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="top"
+        android:text="Помощь"
+        android:textAlignment="center"
+        android:textColor="#ECECE9"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle2"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle2"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/rectangle2"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/reg_but2"
+        android:layout_width="239dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="88dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="88dp"
+        android:layout_marginBottom="25dp"
+        android:background="@drawable/button_grad"
+        android:fontFamily="@font/montserrat"
+        android:onClick="contUs"
+        android:text="Свяжитесь с нами"
+        android:textAlignment="center"
+        android:textAllCaps="false"
+        android:textColor="#ECECE9"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+    <Button
+        android:id="@+id/b_q1"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="15dp"
+        android:background="@drawable/help_but"
+
+        android:onClick="butColChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle2" />
+
+    <Button
+        android:id="@+id/b_q2"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+
+        android:layout_marginTop="9dp"
+        android:background="@drawable/help_but"
+        android:onClick="butColChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_q1" />
+
+    <Button
+        android:id="@+id/b_q3"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"
+        android:background="@drawable/help_but"
+
+        android:onClick="butColChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_q2" />
+
+    <Button
+        android:id="@+id/b_q4"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/help_but"
+        android:onClick="butColChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_q3" />
+
+    <Button
+        android:id="@+id/b_q5"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/help_but"
+        android:onClick="butColChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_q4" />
+
+    <Button
+        android:id="@+id/b_q6"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/help_but"
+        android:onClick="butColChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_q5" />
+
+    <Button
+        android:id="@+id/b_q7"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="8dp"
+
+        android:background="@drawable/help_but"
+        android:onClick="butColChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_q6" />
+
+    <Button
+        android:id="@+id/b_q8"
+        android:layout_width="18dp"
+        android:layout_height="18dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="18dp"
+
+        android:background="@drawable/help_but"
+        android:onClick="butColChange"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_q7" />
+
+    <View
+        android:id="@+id/rectangle"
+        android:layout_width="wrap_content"
+        android:layout_height="192dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="140dp"
+        android:background="@drawable/ans_pole"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="15dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Не нашли свой вопрос? Напишите нам!"
+        android:textColor="#221A23"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle" />
+
+    <TextView
+        android:id="@+id/q1"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Как начать проходить тесты?"
+        android:textColor="#221A23"
+        app:layout_constraintStart_toEndOf="@+id/b_q1"
+        app:layout_constraintTop_toBottomOf="@+id/rectangle2"
+        android:clickable="true"
+        android:onClick="questStyleChange"/>
+
+    <TextView
+        android:id="@+id/q2"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Зачем нужна регистрация?"
+        android:textColor="#221A23"
+        app:layout_constraintStart_toEndOf="@+id/b_q2"
+        app:layout_constraintTop_toBottomOf="@+id/q1"
+        android:clickable="true"
+        android:onClick="questStyleChange"/>
+
+    <TextView
+        android:id="@+id/q3"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Как сохранить свой результат?"
+        android:textColor="#221A23"
+        app:layout_constraintStart_toEndOf="@+id/b_q3"
+        app:layout_constraintTop_toBottomOf="@+id/q2"
+        android:clickable="true"
+        android:onClick="questStyleChange"/>
+
+    <TextView
+        android:id="@+id/q4"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Как поделиться результатом?"
+        android:textColor="#221A23"
+        app:layout_constraintStart_toEndOf="@+id/b_q4"
+        app:layout_constraintTop_toBottomOf="@+id/q3"
+        android:clickable="true"
+        android:onClick="questStyleChange"/>
+
+    <TextView
+        android:id="@+id/q5"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Как мне получить звёзды?"
+        android:textColor="#221A23"
+        app:layout_constraintStart_toEndOf="@+id/b_q5"
+        app:layout_constraintTop_toBottomOf="@+id/q4"
+        android:clickable="true"
+        android:onClick="questStyleChange"/>
+
+    <TextView
+        android:id="@+id/q6"
+        android:layout_width="wrap_content"
+        android:layout_height="18dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Откуда берутся вопросы для теста?"
+        android:textColor="#221A23"
+        app:layout_constraintStart_toEndOf="@+id/b_q6"
+        app:layout_constraintTop_toBottomOf="@+id/q5"
+        android:clickable="true"
+        android:onClick="questStyleChange"/>
+
+    <TextView
+        android:id="@+id/q7"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Вопросы для какой категории вождения?"
+        android:textColor="#221A23"
+        app:layout_constraintStart_toEndOf="@+id/b_q7"
+        app:layout_constraintTop_toBottomOf="@+id/q6"
+        android:clickable="true"
+        android:onClick="questStyleChange"/>
+
+    <TextView
+        android:id="@+id/q8"
+        android:layout_width="309dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="8dp"
+        android:fontFamily="@font/montserrat"
+        android:text="Можно ли использовать этот тест как подтверждение категории?"
+        android:textColor="#221A23"
+        app:layout_constraintStart_toEndOf="@+id/b_q8"
+        app:layout_constraintTop_toBottomOf="@+id/q7"
+        android:clickable="true"
+        android:onClick="questStyleChange"/>
+
+    <TextView
+        android:id="@+id/ans"
+        android:layout_width="340dp"
+        android:layout_height="172dp"
+        android:fontFamily="@font/montserrat"
+        android:text='Нажать кнопку старт, прочитать теорию и начать проходить тест по пункту теории.\nТакже вы можете пройти тест из 20 случайных вопросов нажав на кнопку "Быстрый тест".'
+        android:textColor="#ECECE9"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle"
+        app:layout_constraintEnd_toEndOf="@+id/rectangle"
+        app:layout_constraintStart_toStartOf="@+id/rectangle"
+        app:layout_constraintTop_toTopOf="@+id/rectangle" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

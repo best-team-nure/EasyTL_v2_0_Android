@@ -1,0 +1,337 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/loggedin_drawer"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        layout="@layout/app_bar_loged_in"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="300dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        app:headerLayout="@layout/nav_header_loged_in"
+        app:menu="@menu/activity_loged_in_drawer">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="157dp">
+
+            <TextView
+                android:id="@+id/q_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="ВОПРОСЫ"
+                android:textAlignment="viewStart"
+                android:textColor="#5B4E5C"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:typeface="serif"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/canvas3"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_marginTop="12dp"
+                android:background="#ABF8F8DC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/q_text" />
+
+            <View
+                android:id="@+id/rectangle7"
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#B8E4C0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/canvas3" />
+
+            <TextView
+                android:id="@+id/test_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="ТЕСТЫ"
+                android:textAlignment="viewStart"
+                android:textColor="#5B4E5C"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:typeface="serif"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectangle7" />
+
+            <View
+                android:id="@+id/canvas2"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="12dp"
+                android:background="#ABF8F8DC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/test_text" />
+
+            <View
+                android:id="@+id/rectangle5"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#B8E4C0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/canvas2" />
+
+            <TextView
+                android:id="@+id/average_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="13dp"
+                android:layout_marginTop="20dp"
+                android:fontFamily="@font/montserrat"
+                android:text="СРЕДНИЕ ЗНАЧЕНИЯ"
+                android:textAlignment="viewStart"
+                android:textColor="#5B4E5C"
+                android:textSize="20sp"
+                android:textStyle="italic"
+                android:typeface="serif"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectangle5" />
+
+            <View
+                android:id="@+id/canvas"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_marginTop="12dp"
+                android:background="#ABF8F8DC"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/average_text" />
+
+            <View
+                android:id="@+id/rectangle"
+                android:layout_width="match_parent"
+                android:layout_height="25dp"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentTop="true"
+                android:background="#B8E4C0"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/canvas" />
+
+            <TextView
+                android:id="@+id/all_q_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Всего: "
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/rectangle7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/canvas3" />
+
+            <TextView
+                android:id="@+id/all_q"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="0"
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/all_q_text"
+                app:layout_constraintStart_toEndOf="@+id/all_q_text"
+                app:layout_constraintTop_toTopOf="@+id/all_q_text" />
+
+            <TextView
+                android:id="@+id/correct_q_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="110dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Верных: "
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangle7"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/canvas3" />
+
+            <TextView
+                android:id="@+id/correct_q"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="0"
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangle7"
+                app:layout_constraintStart_toEndOf="@+id/correct_q_text"
+                app:layout_constraintTop_toBottomOf="@+id/canvas3" />
+
+            <TextView
+                android:id="@+id/all_t_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="120dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Всего: "
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/rectangle5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/canvas2" />
+
+            <TextView
+                android:id="@+id/all_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="0"
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/rectangle5"
+                app:layout_constraintStart_toEndOf="@+id/all_t_text"
+                app:layout_constraintTop_toTopOf="@+id/canvas2" />
+
+            <TextView
+                android:id="@+id/paseed_t_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="90dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Пройденных: "
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangle5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/rectangle5" />
+
+            <TextView
+                android:id="@+id/paseed_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="0"
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangle5"
+                app:layout_constraintStart_toEndOf="@+id/paseed_t_text"
+                app:layout_constraintTop_toTopOf="@+id/rectangle5" />
+
+            <TextView
+                android:id="@+id/average_answ_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Верных ответов в тесте: "
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/rectangle"
+                app:layout_constraintStart_toStartOf="@+id/canvas"
+                app:layout_constraintTop_toTopOf="@+id/canvas" />
+
+            <TextView
+                android:id="@+id/average_answ"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="0"
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/rectangle"
+                app:layout_constraintStart_toEndOf="@+id/average_answ_text"
+                app:layout_constraintTop_toTopOf="@+id/canvas" />
+
+            <TextView
+                android:id="@+id/average_answ_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text=" %"
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toTopOf="@+id/rectangle"
+                app:layout_constraintStart_toEndOf="@+id/average_answ"
+                app:layout_constraintTop_toTopOf="@+id/canvas" />
+
+            <TextView
+                android:id="@+id/average_time_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="45dp"
+                android:fontFamily="@font/montserrat"
+                android:text="Время прохождения: "
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangle"
+                app:layout_constraintStart_toStartOf="@+id/canvas"
+                app:layout_constraintTop_toTopOf="@+id/rectangle" />
+
+            <TextView
+                android:id="@+id/average_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text="0"
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangle"
+                app:layout_constraintStart_toEndOf="@+id/average_time_text"
+                app:layout_constraintTop_toTopOf="@+id/rectangle" />
+
+            <TextView
+                android:id="@+id/average_time_text2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/montserrat"
+                android:text=" c"
+                android:textColor="#221A23"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/rectangle"
+                app:layout_constraintStart_toEndOf="@+id/average_time"
+                app:layout_constraintTop_toTopOf="@+id/rectangle" />
+
+            <Button
+                android:id="@+id/shareBtn"
+                android:layout_width="230dp"
+                android:layout_height="60dp"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="40dp"
+                android:background="@drawable/button_grad"
+                android:fontFamily="@font/montserrat"
+                android:onClick="fbShare"
+                android:text="Поделиться"
+                android:textAllCaps="false"
+                android:textColor="#ECECE9"
+                android:textSize="24sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.5"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/rectangle" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>

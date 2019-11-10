@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg2_1">
+
+    <Button
+        android:id="@+id/nextButton2"
+        android:layout_width="30dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="8dp"
+        android:background="@color/colorTransarent"
+        android:drawableStart="@drawable/arrow_right_24dp"
+        android:onClick="nextBut"
+        android:textColor="#FFFFFF"
+        android:textStyle="normal"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <Button
+        android:id="@+id/back_button8"
+        android:layout_width="40dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="8dp"
+        android:background="@color/colorTransarent"
+        android:drawableStart="@drawable/ic_keyboard_arrow_left_black_24dp"
+        android:fontFamily="@font/montserrat"
+        android:onClick="backBut"
+        android:textAlignment="viewStart"
+        android:textAllCaps="false"
+        android:textColor="#ECECE9"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/headderRectangle2"
+        android:layout_width="414dp"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/header2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/headderTextView2"
+        android:layout_width="0dp"
+        android:layout_height="36dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginTop="14dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="top"
+        android:text="Обучение"
+        android:textAlignment="center"
+        android:textColor="#ECECE9"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/rectangle4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <View
+        android:id="@+id/topicRectangle2"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:background="#AA7B3D83"
+        app:layout_constraintTop_toBottomOf="@+id/headderRectangle2" />
+
+    <TextView
+        android:id="@+id/questionNumTextView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="top"
+        android:text="Вопрос:\n"
+        android:textAlignment="center"
+        android:textColor="#ECECE9"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/topicRectangle2"
+        app:layout_constraintTop_toBottomOf="@+id/topicRectangle2" />
+
+    <TextView
+        android:id="@+id/questionTextView"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:text="TextView"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gifochkaWebView" />
+
+    <WebView
+        android:id="@+id/gifochkaWebView"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="24dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="1"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionNumTextView" >
+
+    </WebView>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="24dp"
+        android:layout_weight="1"
+        app:layout_constraintBottom_toTopOf="@+id/nextButton2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/questionTextView">
+
+        <RadioGroup
+            android:id="@+id/answerRadioGroup"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RadioButton
+                android:id="@+id/answerRadioButton1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="answerRBclick_0"
+                android:text="RadioButton" />
+
+            <RadioButton
+                android:id="@+id/answerRadioButton2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:onClick="answerRBclick_1"
+                android:text="RadioButton" />
+
+        </RadioGroup>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>
