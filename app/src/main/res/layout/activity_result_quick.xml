@@ -8,7 +8,7 @@
 
     <View
         android:id="@+id/rectangle5"
-        android:layout_width="414dp"
+        android:layout_width="0dp"
         android:layout_height="60dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentTop="true"

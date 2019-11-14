@@ -33,11 +33,12 @@
 
     <ImageView
         android:id="@+id/imageView8"
-        android:layout_width="414dp"
+        android:layout_width="0dp"
         android:layout_height="58dp"
         android:alpha=".6"
         android:contentDescription="TODO"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@color/fifth_color" />
 
