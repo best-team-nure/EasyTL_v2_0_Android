@@ -104,12 +104,14 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                         };
                         userIDRef.addListenerForSingleValueEvent(eventListener);
                     }
-                    user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
-                        @Override
-                        public void onComplete(@NonNull Task<Void> task) {
-                            Toast.makeText(Registration.this, "Дружище, мы отправили тебе на почту письмо! Перейди по ссылочке ;)",  Toast.LENGTH_SHORT).show();
-                        }
-                    });
+                    if (!user.isEmailVerified()) {
+                        user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                            @Override
+                            public void onComplete(@NonNull Task<Void> task) {
+                                Toast.makeText(Registration.this, "Дружище, мы отправили тебе на почту письмо! Перейди по ссылочке ;)", Toast.LENGTH_SHORT).show();
+                            }
+                        });
+                    }
                     Intent intent = new Intent(Registration.this, LoginActivity.class);
                     startActivity(intent);
                 } else {
@@ -279,9 +281,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
         mAuth.createUserWithEmailAndPassword(email, password).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
-                if (task.isSuccessful()) {
-                    Toast.makeText(Registration.this, "Ты теперь часть команды, дружище!", Toast.LENGTH_SHORT).show();
-                } else {
+                if (!task.isSuccessful()){
                     Toast.makeText(Registration.this, "Упс, что-то не так :(", Toast.LENGTH_SHORT).show();
                 }
             }
