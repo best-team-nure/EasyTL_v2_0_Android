@@ -78,7 +78,7 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
                 if (user != null) {
-                    if(gAuth == true || fAuth == true) {
+                    if(gAuth|| fAuth) {
                         mAuth = FirebaseAuth.getInstance();
                         String id = mAuth.getInstance().getCurrentUser().getUid();
                         DatabaseReference userIDRef = FirebaseDatabase.getInstance().getReference(id);
@@ -87,9 +87,9 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                             @Override
                             public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                 if (!dataSnapshot.exists()) {
-                                    if (gAuth == true) {
+                                    if (gAuth) {
                                         User user = new User("", gname);
-                                    }else if (fAuth == true) {
+                                    }else if (fAuth) {
                                         User user = new User("", f_name);
                                     }
                                     Intent intent = new Intent(Registration.this, LogedIn.class);
@@ -104,7 +104,13 @@ public class Registration extends AppCompatActivity implements View.OnClickListe
                         };
                         userIDRef.addListenerForSingleValueEvent(eventListener);
                     }
-                    Intent intent = new Intent(Registration.this, LogedIn.class);
+                    user.sendEmailVerification().addOnCompleteListener(new OnCompleteListener<Void>() {
+                        @Override
+                        public void onComplete(@NonNull Task<Void> task) {
+                            Toast.makeText(Registration.this, "Дружище, мы отправили тебе на почту письмо! Перейди по ссылочке ;)",  Toast.LENGTH_SHORT).show();
+                        }
+                    });
+                    Intent intent = new Intent(Registration.this, LoginActivity.class);
                     startActivity(intent);
                 } else {
                     //User is signed out

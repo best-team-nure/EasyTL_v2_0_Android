@@ -247,19 +247,6 @@ public class LogedIn extends AppCompatActivity {
             super.onBackPressed();
         }
     }
-
-//    public void fillStarArr(){
-////        int count_full_stars = stars/2;
-////        int half_star = stars%2;
-////        int i = 0;
-////        while (i < count_full_stars){
-////            stars_arr[i] = 2;
-////            i++;
-////        }
-////        if(half_star == 1){
-////            stars_arr[i] = 1;
-////        }
-////    }
     public int[] fillStarArr(){
         int sum = 0;
         for(int i = 0; i < stars_arr.length; i++){
@@ -308,23 +295,6 @@ public class LogedIn extends AppCompatActivity {
         }
         avatarChange();
     }
-//    public void colorStars(){
-//        int sum = 0;
-//        for(int i = 0; i < stars_arr.length; i++){
-//            sum += stars_arr[i];
-//        }
-//        stars = sum;
-//        avatarChange();
-//        for (int i = 0; i < stars_arr_IV.length; i++) {
-//            if(stars_arr[i] == 1){
-//                stars_arr_IV[i].setImageResource(R.drawable.half_star);
-//            } else if(stars_arr[i] == 2){
-//                stars_arr_IV[i].setImageResource(R.drawable.full_star);
-//            } else{
-//                stars_arr_IV[i].setImageResource(R.drawable.empt_star);
-//            }
-//        }
-//    }
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.

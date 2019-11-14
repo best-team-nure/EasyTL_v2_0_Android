@@ -78,20 +78,21 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             @Override
             public void onAuthStateChanged(@NonNull FirebaseAuth firebaseAuth) {
                 FirebaseUser user = firebaseAuth.getCurrentUser();
-                if (user != null) {
+                    if (user != null) {
+//                        if(user.isEmailVerified()) {
                         //User is signed in
-                    if(gAuth == true || fAuth == true) {
-                        mAuth = FirebaseAuth.getInstance();
-                        String id = mAuth.getInstance().getCurrentUser().getUid();
-                        DatabaseReference userIDRef = FirebaseDatabase.getInstance().getReference(id);
+                        if (gAuth|| fAuth) {
+                            mAuth = FirebaseAuth.getInstance();
+                            String id = mAuth.getInstance().getCurrentUser().getUid();
+                            DatabaseReference userIDRef = FirebaseDatabase.getInstance().getReference(id);
 
                             ValueEventListener eventListener = new ValueEventListener() {
                                 @Override
                                 public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
                                     if (!dataSnapshot.exists()) {
-                                        if (gAuth == true) {
+                                        if (gAuth) {
                                             User user = new User("", gname);
-                                        }else if (fAuth == true) {
+                                        } else if (fAuth) {
                                             User user = new User("", f_name);
                                         }
                                         Intent intent = new Intent(LoginActivity.this, LogedIn.class);
@@ -106,12 +107,15 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                             };
                             userIDRef.addListenerForSingleValueEvent(eventListener);
                         }
-                        Intent intent = new Intent(LoginActivity.this, LogedIn.class);
+                        Intent intent = new Intent(LoginActivity.this, EasyTL.class);
                         startActivity(intent);
+//                        } else{
+//                            Toast.makeText(LoginActivity.this, "Not validated user", Toast.LENGTH_SHORT).show();
+//                        }
                     } else {
-                    //User is signed out
+                        //User is signed out
+                    }
 
-                }
             }
         };
         FacebookSdk.sdkInitialize(getApplicationContext());
@@ -280,7 +284,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if (task.isSuccessful()) {
                         Toast.makeText(LoginActivity.this, "Ты авторизовался, дружище!", Toast.LENGTH_SHORT).show();
-                        Intent intent = new Intent(LoginActivity.this, LogedIn.class);
+                        Intent intent = new Intent(LoginActivity.this, EasyTL.class);
                         startActivity(intent);
                 } else {
                     Toast.makeText(LoginActivity.this, "«Такой e-mail или пароль куда-то запропастился. Проверь правильность.»", Toast.LENGTH_SHORT).show();

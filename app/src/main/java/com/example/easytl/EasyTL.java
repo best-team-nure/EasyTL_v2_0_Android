@@ -15,7 +15,9 @@ import androidx.core.view.GravityCompat;
 import androidx.drawerlayout.widget.DrawerLayout;
 
 import android.view.MenuItem;
+import android.widget.Toast;
 
+import com.facebook.login.LoginManager;
 import com.google.android.material.navigation.NavigationView;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
@@ -42,8 +44,14 @@ public class EasyTL extends AppCompatActivity {
         mAuth = FirebaseAuth.getInstance();
         FirebaseUser user = mAuth.getCurrentUser();
         if(user != null) {
+            if(user.isEmailVerified()) {
             Intent intent = new Intent(EasyTL.this, LogedIn.class);
             startActivity(intent);
+            } else {
+                FirebaseAuth.getInstance().signOut();
+                LoginManager.getInstance().logOut();
+                Toast.makeText(EasyTL.this, "Ты не подтвердил почту :(", Toast.LENGTH_SHORT).show();
+            }
         }
     }
     @Override
