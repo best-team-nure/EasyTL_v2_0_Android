@@ -33,7 +33,7 @@ public class ResultQuick extends AppCompatActivity {
         seconds = getIntent().getIntExtra("seconds", 0);
 
         String result;
-        if (score >= 18) {
+        if (score >= 18 && (minutes > 0 ||  minutes == 0 && seconds > 0)) {
             result = "Тест пройден!";
         } else {
             result = "Тест провален!";
