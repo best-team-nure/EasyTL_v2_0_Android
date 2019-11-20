@@ -297,4 +297,8 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         Intent intent = new Intent(LoginActivity.this, EasyTL.class);
         startActivity(intent);
     }
+    public void ressPass(View view) {
+        Intent intent = new Intent(LoginActivity.this, PassRestore.class);
+        startActivity(intent);
+    }
 }
