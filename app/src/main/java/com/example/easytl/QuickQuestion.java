@@ -103,8 +103,8 @@ public class QuickQuestion extends AppCompatActivity {
             do {
                 repetitionFlag = false;
 
-                // random number [0;5]
-                topicNum = (int) (Math.random() * 6);
+                // random number [0;7]
+                topicNum = (int) (Math.random() * 8);
 
                 // random number [0;4]
                 questionNum = (int) (Math.random() * 5);

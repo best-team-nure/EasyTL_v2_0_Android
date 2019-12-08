@@ -24,6 +24,12 @@ public class Question {
             case 5:
                 currentQuery = questionsTopic5[questionNumber];
                 break;
+            case 6:
+                currentQuery = questionsTopic6[questionNumber];
+                break;
+            case 7:
+                currentQuery = questionsTopic7[questionNumber];
+                break;
         }
     }
 
@@ -130,6 +136,29 @@ public class Question {
                     1, R.string.comment_54),
             new Query(R.string.query_55, new int[]{R.string.answer_55_1, R.string.answer_55_2},
                     0, R.string.comment_55),
+    };
+    private static Query[] questionsTopic6= new Query[]{
+            new Query(R.string.query_61, new int[]{R.string.answer_61_1, R.string.answer_61_2},
+                    0, R.string.comment_61),
+            new Query(R.string.query_62, new int[]{R.string.answer_62_1, R.string.answer_62_2},
+                    0, R.string.comment_62),
+            new Query(R.string.query_63, new int[]{R.string.answer_63_1, R.string.answer_63_2},
+                    1, R.string.comment_63),
+            new Query(R.string.query_64, new int[]{R.string.answer_64_1, R.string.answer_64_2},
+                    0, R.string.comment_64),
+            new Query(R.string.query_65, new int[]{R.string.answer_65_1, R.string.answer_65_2},
+                    1, R.string.comment_65),
+    };private static Query[] questionsTopic7= new Query[]{
+            new Query(R.string.query_71, new int[]{R.string.answer_71_1, R.string.answer_71_2},
+                    1, R.string.comment_71),
+            new Query(R.string.query_72, new int[]{R.string.answer_72_1, R.string.answer_72_2},
+                    1, R.string.comment_72),
+            new Query(R.string.query_73, new int[]{R.string.answer_73_1, R.string.answer_73_2},
+                    1, R.string.comment_73),
+            new Query(R.string.query_74, new int[]{R.string.answer_74_1, R.string.answer_74_2},
+                    0, R.string.comment_74),
+            new Query(R.string.query_75, new int[]{R.string.answer_75_1, R.string.answer_75_2},
+                    0, R.string.comment_75),
     };
 }
 
