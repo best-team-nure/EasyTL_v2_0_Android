@@ -105,6 +105,40 @@ public class PickTheory extends AppCompatActivity {
 
                             tableRow.setBackgroundResource(R.drawable.t_open);
 
+                            if (maxTopicNum > 5) {
+                                tableRow.setBackgroundResource(R.drawable.t_passed);
+                                tableRow = (TableRow) findViewById(R.id.t6);
+
+                                listener = new OnClickListener() {
+                                    @Override
+                                    public void onClick(View v) {
+                                        chooseTopic(v, 6);
+                                    }
+                                };
+                                tableRow.setOnClickListener(listener);
+
+                                tableRow.setBackgroundResource(R.drawable.t_open);
+
+                                if (maxTopicNum > 6) {
+                                    tableRow.setBackgroundResource(R.drawable.t_passed);
+                                    tableRow = (TableRow) findViewById(R.id.t7);
+
+                                    listener = new OnClickListener() {
+                                        @Override
+                                        public void onClick(View v) {
+                                            chooseTopic(v, 7);
+                                        }
+                                    };
+                                    tableRow.setOnClickListener(listener);
+
+                                    tableRow.setBackgroundResource(R.drawable.t_open);
+
+                                } else {
+                                    tableRow.setBackgroundResource(R.drawable.t_open);
+                                }
+                            } else {
+                                tableRow.setBackgroundResource(R.drawable.t_open);
+                            }
                         } else {
                             tableRow.setBackgroundResource(R.drawable.t_open);
                         }

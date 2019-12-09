@@ -17,6 +17,8 @@ public class Theory extends AppCompatActivity {
             R.string.topic_name_3,
             R.string.topic_name_4,
             R.string.topic_name_5,
+            R.string.topic_name_6,
+            R.string.topic_name_7
     };
 
     int [] content = new int[] {
@@ -26,6 +28,8 @@ public class Theory extends AppCompatActivity {
             R.string.theory_content_3,
             R.string.theory_content_4,
             R.string.theory_content_5,
+            R.string.theory_content_6,
+            R.string.theory_content_7
     };
 
     @Override
